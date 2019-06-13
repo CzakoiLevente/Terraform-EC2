@@ -1,7 +1,5 @@
 # Terraform
 
-Three environments: Staging, Dev and Production EC2 servers are created with Terraform.
-
-All the dependencies that are required by the app are automatically installed after the server creation from the TF file.
-
-The app itself is automatically deployed and started after the server has been created.
+An EC2 micro instance is created using Terraform.During the creation all the dependencies (Git,Docker, system updates) are created.
+A user for the developer is created, which has access to all the dependencies installed, but is not a super user.
+Accessing the server as dev should be possible with SSH, but without a .pem file, only by entering the password.
